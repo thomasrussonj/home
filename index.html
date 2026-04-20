@@ -1,717 +1,116 @@
-/* ============================================================
-   THOMAS RUSSO — thomasrussonj.com
-   style.css
-   ============================================================ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Russo | Howell, NJ</title>
+  <meta name="description" content="Thomas Russo is based in Howell, New Jersey, and a former Deputy Mayor of Howell Township." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Lock viewport height on load so mobile browsers (Brave, Chrome) don't
+    // stretch the hero when the address bar hides on scroll.
+    document.documentElement.style.setProperty('--locked-vh', window.innerHeight + 'px');
+  </script>
+</head>
+<body>
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;900&family=Martel:wght@400&display=swap');
+  <!-- ─── Navigation ──────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Thomas Russo</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-/* ─── Variables ──────────────────────────────────────────── */
-:root {
-  --black:         #0a0a0a;
-  --white:         #ffffff;
-  --silver-light:  #e8e8ed;
-  --silver-mid:    #c0c0c0;
-  --silver-dark:   #a8a8b3;
-  --silver-subtle: #f5f5f7;
-  --text-muted:    #555560;
-  --nav-height:    72px;
-  --max-w:         1160px;
-  --pad-x:         clamp(24px, 5vw, 80px);
-}
+  <!-- ─── Hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-rule"></div>
+      <h1 class="hero-name">Thomas<br>Russo</h1>
+      <h2 class="hero-title">Coming Soon</h2>
+      <p class="hero-location">Howell, New Jersey</p>
+    </div>
+  </section>
 
-/* ─── Reset ──────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Martel', Georgia, serif;
-  font-weight: 400;
-  color: var(--black);
-  background: var(--white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-img { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
+  <!-- ─── Intro ────────────────────────────────────────────── -->
+  <section class="section-intro">
+    <div class="section-intro-inner">
+      <div class="section-intro-left">
+        <div class="intro-rule"></div>
+        <p class="label">About</p>
+      </div>
+      <p class="section-intro-body">
+        Thomas Russo is based in Howell, New Jersey. He is committed to serving his community with integrity and care — taking the time to understand every situation and the people behind it.
+      </p>
+    </div>
+  </section>
 
-/* ─── Type Scale ─────────────────────────────────────────── */
-h1 { font-family: 'Fira Sans', sans-serif; font-weight: 900; }
-h2 { font-family: 'Fira Sans', sans-serif; font-weight: 700; }
-p  { line-height: 1.85; }
+  <!-- ─── Credential ───────────────────────────────────────── -->
+  <section class="section-credential">
+    <div class="section-credential-inner">
+      <div>
+        <h2 class="credential-heading">Rooted in<br>the Community</h2>
+      </div>
+      <div>
+        <p class="credential-body">
+          Before focusing exclusively on law, Thomas Russo served as Deputy Mayor of Howell Township in New Jersey. Public service shaped the way he works — with accountability, care, and a genuine understanding of the community he represents. That foundation carries into every case he takes on.
+        </p>
+        <div class="credential-tag">
+          <div class="credential-tag-line"></div>
+          <span class="credential-tag-text">Former Deputy Mayor of Howell Township</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* ─── Utilities ──────────────────────────────────────────── */
-.label {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--silver-dark);
-}
+  <!-- ─── CTA ──────────────────────────────────────────────── -->
+  <section class="section-cta">
+    <div class="section-cta-inner">
+      <h2 class="cta-heading">Ready to Talk?</h2>
+      <p class="cta-sub">Feel free to get in touch using the link below.</p>
+      <a href="contact.html" class="btn">Get in Touch</a>
+    </div>
+  </section>
 
-/* ─── Navigation ─────────────────────────────────────────── */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  height: var(--nav-height);
-  background: rgba(10, 10, 10, 0.97);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(168,168,179,0.15);
-  display: flex;
-  align-items: center;
-}
-.nav-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad-x);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-logo {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 900;
-  font-size: 1.25rem;
-  letter-spacing: 0.04em;
-  color: var(--white);
-  flex-shrink: 0;
-}
-.nav-links {
-  display: flex;
-  gap: 40px;
-}
-.nav-links a {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--white);
-  position: relative;
-  padding-bottom: 3px;
-  transition: color 0.2s;
-}
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--silver-mid);
-  transition: width 0.35s ease;
-}
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-}
+  <!-- ─── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Thomas Russo</span>
+        <span class="footer-location">Howell, New Jersey</span>
+        <span class="footer-copy">&copy; 2026 Thomas Russo. All rights reserved.</span>
+      </div>
+      <a href="https://www.instagram.com/thomasrussoesquire/" class="footer-instagram" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
 
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 4px;
-}
-.nav-toggle span {
-  display: block;
-  width: 22px;
-  height: 1px;
-  background: var(--white);
-  transition: all 0.3s ease;
-}
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
 
-/* ─── Footer ─────────────────────────────────────────────── */
-.footer {
-  background: var(--black);
-  color: var(--white);
-  padding: 52px var(--pad-x);
-}
-.footer-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.footer-left { display: flex; flex-direction: column; gap: 7px; }
-.footer-name {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 900;
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-}
-.footer-location {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 400;
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--silver-dark);
-}
-.footer-copy {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 400;
-  font-size: 0.68rem;
-  color: rgba(168,168,179,0.6);
-  letter-spacing: 0.04em;
-  margin-top: 4px;
-}
-.footer-instagram {
-  display: flex;
-  align-items: center;
-  color: var(--white);
-  opacity: 0.7;
-  transition: opacity 0.25s;
-}
-.footer-instagram:hover { opacity: 1; }
-.footer-instagram svg { width: 20px; height: 20px; }
-
-/* ─── Home Page ──────────────────────────────────────────── */
-.hero {
-  position: relative;
-  height: calc(100vh - var(--nav-height));
-  min-height: 600px;
-  background: url('images/hero.webp') left center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(10,10,10,0.0)  0%,
-    rgba(10,10,10,0.1)  30%,
-    rgba(10,10,10,0.55) 55%,
-    rgba(10,10,10,0.88) 100%
-  );
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: right;
-  padding: 48px var(--pad-x) 48px 40px;
-  max-width: 560px;
-  animation: fadeUp 1s ease both;
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.hero-eyebrow {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--silver-dark);
-  margin-bottom: 22px;
-}
-.hero-rule {
-  width: 40px;
-  height: 1px;
-  background: var(--silver-mid);
-  margin: 0 0 22px auto;
-}
-.hero-name {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 900;
-  font-size: clamp(3.5rem, 7.5vw, 7rem);
-  color: var(--white);
-  line-height: 0.95;
-  letter-spacing: 0em;
-  margin-bottom: 24px;
-}
-.hero-title {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 700;
-  font-size: clamp(1rem, 1.8vw, 1.3rem);
-  color: var(--silver-mid);
-  letter-spacing: 0.02em;
-  margin-bottom: 14px;
-  line-height: 1.4;
-}
-.hero-location {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 400;
-  font-size: 0.75rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--silver-dark);
-}
-
-.section-intro {
-  padding: 110px var(--pad-x);
-}
-.section-intro-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 80px;
-  align-items: start;
-}
-.section-intro-left {
-  padding-top: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.intro-rule {
-  width: 32px;
-  height: 1px;
-  background: var(--silver-mid);
-}
-.section-intro-body {
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  color: #2a2a2a;
-  line-height: 1.9;
-}
-
-.section-credential {
-  border-top: 1px solid var(--silver-light);
-  border-bottom: 1px solid var(--silver-light);
-  background: var(--silver-subtle);
-  padding: 90px var(--pad-x);
-}
-.section-credential-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-.credential-heading {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-.credential-body {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 28px;
-}
-.credential-tag {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.credential-tag-line {
-  width: 28px;
-  height: 1px;
-  background: var(--silver-mid);
-}
-.credential-tag-text {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--silver-dark);
-}
-
-.section-cta {
-  padding: 110px var(--pad-x);
-  text-align: center;
-}
-.section-cta-inner { max-width: 580px; margin: 0 auto; }
-.cta-heading {
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-  margin-bottom: 20px;
-}
-.cta-sub {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 44px;
-}
-.btn {
-  display: inline-block;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 700;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 17px 44px;
-  border: 1px solid var(--black);
-  color: var(--black);
-  background: transparent;
-  cursor: pointer;
-  transition: background 0.28s, color 0.28s;
-}
-.btn:hover {
-  background: var(--black);
-  color: var(--white);
-}
-/* ─── About Page ─────────────────────────────────────────── */
-
-.about-split {
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-  align-items: start;
-}
-.about-image-col {
-  align-self: start;
-  padding-top: 0;
-}
-.about-image-col img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.about-content-col {
-  padding: 80px 70px 80px 80px;
-  display: flex;
-  flex-direction: column;
-}
-.about-eyebrow { margin-bottom: 36px; }
-.about-name {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  letter-spacing: 0em;
-  line-height: 1.02;
-  margin-bottom: 10px;
-}
-.about-title-tag {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--silver-dark);
-  margin-bottom: 44px;
-}
-.about-divider {
-  width: 36px;
-  height: 1px;
-  background: var(--silver-mid);
-  margin-bottom: 44px;
-}
-.about-bio {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  margin-bottom: 52px;
-}
-.about-bio p { color: #2c2c2c; font-size: 1rem; }
-
-/* ─── Store Page ─────────────────────────────────────────── */
-
-.store-hero {
-  min-height: calc(100vh - var(--nav-height));
-  background: var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px var(--pad-x);
-  position: relative;
-  overflow: hidden;
-}
-.store-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.72) 100%),
-    url('images/book.webp') center center / cover no-repeat;
-}
-.store-hero::after {
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  border: 1px solid rgba(168,168,179,0.08);
-  pointer-events: none;
-}
-.store-inner {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  max-width: 720px;
-}
-.store-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  border: 1px solid rgba(168,168,179,0.25);
-  padding: 9px 22px;
-  margin-bottom: 56px;
-}
-.store-badge-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--silver-dark);
-  animation: pulse 2.6s ease-in-out infinite;
-  flex-shrink: 0;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.3; transform: scale(0.7); }
-}
-.store-badge-text {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.63rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--silver-dark);
-}
-.store-eyebrow {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.65rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: rgba(168,168,179,0.5);
-  margin-bottom: 20px;
-}
-.store-heading {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 900;
-  font-size: clamp(3rem, 7vw, 6.5rem);
-  color: var(--white);
-  letter-spacing: 0em;
-  line-height: 0.92;
-  margin-bottom: 40px;
-}
-.store-rule {
-  width: 1px;
-  height: 56px;
-  background: linear-gradient(to bottom, rgba(168,168,179,0.5), transparent);
-  margin: 0 auto 40px;
-}
-.store-description {
-  font-family: 'Martel', serif;
-  color: rgba(255,255,255,0.45);
-  font-size: 1rem;
-  line-height: 1.9;
-  max-width: 440px;
-  margin: 0 auto;
-}
-.store-year {
-  display: inline-block;
-  margin-top: 48px;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 700;
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(168,168,179,0.35);
-  border-top: 1px solid rgba(168,168,179,0.15);
-  padding-top: 20px;
-}
-
-/* ─── Contact Page ───────────────────────────────────────── */
-
-.contact-page {
-  padding: 100px var(--pad-x) 120px;
-  min-height: calc(100vh - var(--nav-height));
-}
-.contact-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.7fr;
-  gap: 100px;
-  align-items: start;
-}
-.contact-left { padding-top: 8px; }
-.contact-heading {
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  letter-spacing: 0em;
-  line-height: 1.05;
-  margin-bottom: 20px;
-}
-.contact-divider {
-  width: 32px;
-  height: 1px;
-  background: var(--silver-mid);
-  margin: 24px 0 28px;
-}
-.contact-desc {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 52px;
-}
-.contact-meta { display: flex; flex-direction: column; gap: 20px; }
-.contact-meta-item { display: flex; flex-direction: column; gap: 5px; }
-.contact-meta-label {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.62rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--silver-dark);
-}
-.contact-meta-value {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: var(--black);
-}
-.contact-meta-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 0.9rem;
-  color: var(--black);
-  transition: color 0.2s;
-}
-.contact-meta-link:hover { color: var(--silver-dark); }
-.contact-meta-link svg { width: 15px; height: 15px; flex-shrink: 0; }
-
-.contact-right {
-  background: var(--silver-subtle);
-  border: 1px solid var(--silver-light);
-  padding: 52px 48px;
-}
-
-.contact-form { display: flex; flex-direction: column; gap: 32px; }
-.form-group { display: flex; flex-direction: column; gap: 10px; }
-.form-label {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--black);
-}
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 12px 0;
-  font-family: 'Martel', serif;
-  font-size: 1rem;
-  color: var(--black);
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--silver-light);
-  outline: none;
-  transition: border-color 0.25s;
-  resize: none;
-  -webkit-appearance: none;
-}
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: var(--silver-dark);
-  font-size: 0.9rem;
-}
-.form-input:focus,
-.form-textarea:focus {
-  border-bottom-color: var(--black);
-}
-.form-textarea { min-height: 130px; }
-.form-submit {
-  align-self: stretch;
-  margin-top: 8px;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 700;
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 22px 44px;
-  background: var(--black);
-  color: var(--white);
-  border: 1px solid var(--black);
-  cursor: pointer;
-  transition: background 0.28s, color 0.28s;
-}
-.form-submit:hover {
-  background: transparent;
-  color: var(--black);
-}
-
-/* ─── Responsive ─────────────────────────────────────────── */
-
-@media (max-width: 960px) {
-  .section-intro-inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .section-credential-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .contact-inner {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-}
-
-@media (max-width: 640px) {
-  :root { --nav-height: 64px; }
-
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: var(--nav-height);
-    left: 0;
-    right: 0;
-    background: var(--white);
-    border-bottom: 1px solid var(--silver-light);
-    flex-direction: column;
-    padding: 28px var(--pad-x) 32px;
-    gap: 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  }
-  .nav-links.open { display: flex; background: var(--black); border-bottom-color: rgba(168,168,179,0.15); }
-  .nav-links a { font-size: 0.85rem; }
-  .nav-toggle { display: flex; }
-
-  .hero { background-position: -120px center; height: calc(var(--locked-vh, 100svh) - var(--nav-height)); }
-
-  .hero-content {
-    max-width: 100%;
-    padding: 32px 24px;
-  }
-  .hero-name { font-size: clamp(2.6rem, 11vw, 4rem); }
-
-  .section-intro,
-  .section-credential,
-  .section-cta { padding: 72px var(--pad-x); }
-
-  .about-split {
-    grid-template-columns: 1fr;
-  }
-  .about-image-col {
-    width: 100%;
-    overflow: hidden;
-    padding-top: 0;
-  }
-  .about-image-col img {
-    display: block;
-    margin-top: -150px;
-  }
-  .about-content-col {
-    padding: 48px var(--pad-x) 64px;
-  }
-  .about-cta {
-    text-align: center;
-  }
-
-  .store-hero::after { display: none; }
-
-  .contact-page { padding: 72px var(--pad-x) 96px; }
-  .contact-heading { font-size: clamp(3rem, 7vw, 6.5rem); }
-
-  .footer-inner { flex-direction: column; align-items: flex-start; }
-}
+</body>
+</html>
