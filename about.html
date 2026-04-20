@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Thomas Russo | Attorney at Law</title>
+  <meta name="description" content="Learn about Thomas Russo, a personal injury attorney and former Howell City Council Member based in Howell, New Jersey." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Thomas Russo</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── Split Layout ─────────────────────────────────────── -->
+  <div class="about-split">
+
+    <!-- Left: Image -->
+    <div class="about-image-col">
+      <img src="images/about.webp" alt="Thomas Russo, Attorney at Law" />
+    </div>
+
+    <!-- Right: Content -->
+    <div class="about-content-col">
+      <div class="about-eyebrow">
+        <p class="label">About Thomas Russo</p>
+      </div>
+
+      <h1 class="about-name">Thomas<br>Russo</h1>
+      <p class="about-title-tag">Attorney at Law &nbsp;·&nbsp; Howell, New Jersey</p>
+
+      <div class="about-divider"></div>
+
+      <div class="about-bio">
+        <p>
+          Thomas Russo has spent his career representing people who have been injured — individuals navigating some of the hardest moments of their lives. He approaches every case with preparation, care, and a clear-eyed commitment to his clients' wellbeing.
+        </p>
+        <p>
+          Before practicing law, Thomas served as a member of the Howell City Council in New Jersey. That experience shaped how he works — with a deep respect for the people and the community he serves. He understands that behind every case, there is a person who deserves to be heard.
+        </p>
+        <p>
+          He is based in Howell, New Jersey, and represents clients throughout the region.
+        </p>
+      </div>
+
+      <div class="about-cta">
+        <a href="contact.html" class="btn">Get in Touch</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Thomas Russo</span>
+        <span class="footer-location">Howell, New Jersey</span>
+        <span class="footer-copy">&copy; 2026 Thomas Russo. All rights reserved.</span>
+      </div>
+      <a href="https://www.instagram.com/thomasrussoesquire/" class="footer-instagram" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

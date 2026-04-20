@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Thomas Russo | Attorney at Law</title>
+  <meta name="description" content="Contact Thomas Russo, personal injury attorney in Howell, New Jersey." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Thomas Russo</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── Contact ──────────────────────────────────────────── -->
+  <main class="contact-page">
+    <div class="contact-inner">
+
+      <!-- Left: Info -->
+      <div class="contact-left">
+        <p class="label">Get in Touch</p>
+        <h1 class="contact-heading">Let's<br>Talk</h1>
+        <div class="contact-divider"></div>
+        <p class="contact-desc">
+          Thomas Russo responds personally. Whether you have a question about a case or just want to start a conversation, reach out using the form.
+        </p>
+        <div class="contact-meta">
+          <div class="contact-meta-item">
+            <span class="contact-meta-label">Location</span>
+            <span class="contact-meta-value">Howell, New Jersey</span>
+          </div>
+          <div class="contact-meta-item">
+            <span class="contact-meta-label">Follow</span>
+            <a href="https://www.instagram.com/thomasrussoesquire/" class="contact-meta-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+              @thomasrussoesquire
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-right">
+<form
+          class="contact-form"
+          action="https://formspree.io/f/xkokzoqo"
+          method="POST"
+        >
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input
+              class="form-input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input
+              class="form-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea
+              class="form-textarea"
+              id="message"
+              name="message"
+              placeholder="Tell me about your situation..."
+              required
+            ></textarea>
+          </div>
+
+          <button class="form-submit" type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ─── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Thomas Russo</span>
+        <span class="footer-location">Howell, New Jersey</span>
+        <span class="footer-copy">&copy; 2026 Thomas Russo. All rights reserved.</span>
+      </div>
+      <a href="https://www.instagram.com/thomasrussoesquire/" class="footer-instagram" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

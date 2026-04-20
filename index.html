@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Russo — Attorney at Law | Howell, NJ</title>
+  <meta name="description" content="Thomas Russo is a personal injury attorney based in Howell, New Jersey, and a former Howell City Council Member." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Thomas Russo</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Attorney at Law</p>
+      <div class="hero-rule"></div>
+      <h1 class="hero-name">Thomas<br>Russo</h1>
+      <h2 class="hero-title">Attorney Representing<br>the Injured</h2>
+      <p class="hero-location">Howell, New Jersey</p>
+    </div>
+  </section>
+
+  <!-- ─── Intro ────────────────────────────────────────────── -->
+  <section class="section-intro">
+    <div class="section-intro-inner">
+      <div class="section-intro-left">
+        <div class="intro-rule"></div>
+        <p class="label">About</p>
+      </div>
+      <p class="section-intro-body">
+        Thomas Russo is a personal injury attorney based in Howell, New Jersey. His practice is built around a single commitment: that people who have been hurt deserve skilled, honest representation. He takes the time to understand each case and each client — because no two situations are the same.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── Credential ───────────────────────────────────────── -->
+  <section class="section-credential">
+    <div class="section-credential-inner">
+      <div>
+        <h2 class="credential-heading">Rooted in<br>the Community</h2>
+      </div>
+      <div>
+        <p class="credential-body">
+          Before focusing exclusively on law, Thomas Russo served as a member of the Howell City Council in New Jersey. Public service shaped the way he works — with accountability, care, and a genuine understanding of the community he represents. That foundation carries into every case he takes on.
+        </p>
+        <div class="credential-tag">
+          <div class="credential-tag-line"></div>
+          <span class="credential-tag-text">Former Howell City Council Member</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ──────────────────────────────────────────────── -->
+  <section class="section-cta">
+    <div class="section-cta-inner">
+      <h2 class="cta-heading">Ready to Talk?</h2>
+      <p class="cta-sub">If you or someone you know has been injured, reach out. The conversation is free and there's no obligation.</p>
+      <a href="contact.html" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ─── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Thomas Russo</span>
+        <span class="footer-location">Howell, New Jersey</span>
+        <span class="footer-copy">&copy; 2026 Thomas Russo. All rights reserved.</span>
+      </div>
+      <a href="https://www.instagram.com/thomasrussoesquire/" class="footer-instagram" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
