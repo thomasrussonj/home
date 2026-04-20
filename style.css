@@ -368,7 +368,7 @@ p  { line-height: 1.85; }
 }
 .about-image-col {
   align-self: start;
-  padding-top: 80px;
+  padding-top: 0;
 }
 .about-image-col img {
   width: 100%;
