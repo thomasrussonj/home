@@ -677,6 +677,8 @@ p  { line-height: 1.85; }
   .nav-links a { font-size: 0.85rem; }
   .nav-toggle { display: flex; }
 
+  .hero { background-position: -120px center; }
+
   .hero-content {
     max-width: 100%;
     padding: 32px 24px;
